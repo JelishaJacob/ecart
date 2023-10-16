@@ -1,0 +1,28 @@
+<!-- rgba(51, 148, 42, 0.651); rgb(42 194 28 / 67%);-->
+<h1 class="text-center m-4" style="color: rgb(231, 56, 123);">Edit Product</h1>
+<form (ngSubmit)="update()" action="" class="container text-center col-lg-6">
+
+    <input [(ngModel)]="pdata.productName" class="form-control  mt-2" type="text" name="pid" id="pid" placeholder="Product Name">
+    <input [(ngModel)]="pdata.categoryId" class="form-control  mt-2" type="text" name="cid" id="pid" placeholder="categoryId">
+    <input [(ngModel)]="pdata.description" class="form-control  mt-2" type="text" name="desc" id="desc" placeholder="description">
+    <input [(ngModel)]="pdata.price" class="form-control  mt-2" type="text" name="price" id="price" placeholder="price">
+    <input [(ngModel)]="pdata.image" class="form-control  mt-2" type="text" name="image" id="" placeholder="Image">
+    <input [(ngModel)]="pdata.rating" class="form-control  mt-2" type="text" name="rate" id="rate" placeholder="rating">
+    <input [(ngModel)]="pdata.review" class="form-control mt-2" type="text" name="review" id="review" placeholder="Review">
+    <input [(ngModel)]="pdata.warrenty" class="form-control  mt-2" type="text" name="w1" id="w1" placeholder="Warrenty">
+    <input [(ngModel)]="pdata.is_available" class="form-control mt-2" type="text" name="avail" id="avail" placeholder="is_available">
+    <input [(ngModel)]="pdata.vendorName" class="form-control mt-2" type="text" name="vendorName" id="vendorName" placeholder="Vendor Name">
+    <button type="submit" class="btn btn-primary m-3 align-center">Update</button>
+</form>
+
+<!-- "id": 2,
+        "productName": "Men's Jeans",
+        "categoryId": 2,
+        "description": "mens geans black",
+        "price": 800,
+        "image": "https://i.postimg.cc/jj8NbxvN/blackjeans.jpg",
+        "rating": 4.5,
+        "review": 23,
+        "warrenty": 1,
+        "is_available": true -->
+

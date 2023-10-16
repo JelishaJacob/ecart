@@ -1,0 +1,108 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "productName": "Ring",
+      "categoryId": 3,
+      "description": "Golden Colored Ring",
+      "price": "200",
+      "image": "https://i.postimg.cc/3xtdqKKv/gring1.jpg",
+      "rating": 4.5,
+      "review": 20,
+      "warrenty": 1,
+      "is_available": true,
+      "vendorName": "Pretty Store"
+    },
+    {
+      "id": 2,
+      "productName": "Chain",
+      "categoryId": 3,
+      "description": "ButterFly Chain",
+      "price": "300",
+      "image": "https://i.postimg.cc/yN5WVv36/schain1.webp",
+      "rating": 3.5,
+      "review": 20,
+      "warrenty": 1,
+      "is_available": true,
+      "vendorName": "Pretty Store"
+    },
+    {
+      "id": 3,
+      "productName": "Wall Clock",
+      "categoryId": 1,
+      "description": "Silver Wall Clock",
+      "price": 4999,
+      "image": "https://i.postimg.cc/K8C2cWdQ/wclock1.jpg",
+      "rating": 3.5,
+      "review": 20,
+      "warrenty": 1,
+      "is_available": true,
+      "vendorName": "Times"
+    },
+    {
+      "id": 7,
+      "productName": "Table Clock",
+      "categoryId": 1,
+      "description": "Wooden Polished Table Clock",
+      "price": 5999,
+      "image": "https://i.postimg.cc/BQ9gcB2b/tclock1.jpg",
+      "rating": 3.5,
+      "review": 20,
+      "warrenty": 1,
+      "is_available": true,
+      "vendorName": "Times"
+    },
+    {
+      "id": "5",
+      "productName": "Dress",
+      "categoryId": "2",
+      "description": "Red Coloured Floral Dress",
+      "price": "600",
+      "image": "https://i.postimg.cc/LsCDtdVF/dress1.jpg",
+      "rating": "4.5",
+      "review": "23",
+      "warrenty": "0",
+      "is_available": "true",
+      "vendorName": "Zudio"
+    },
+    {
+      "id": "4",
+      "productName": "Projector",
+      "categoryId": "1",
+      "description": "Latest Model Projector",
+      "price": "6599",
+      "image": "https://i.postimg.cc/qBCw35hW/projector1.jpg",
+      "rating": "3",
+      "review": "20",
+      "warrenty": "1",
+      "is_available": "true",
+      "vendorName": "ELectricals"
+    },
+    {
+      "id": "6",
+      "productName": "Salvar",
+      "categoryId": "2",
+      "description": "Royal Blue Party Wear Salvar",
+      "price": "6999",
+      "image": "https://i.postimg.cc/cCYcGvGd/salvar1.jpg",
+      "rating": "4.8",
+      "review": "33",
+      "warrenty": "1",
+      "is_available": "true",
+      "vendorName": "WestSide"
+    },
+    {
+      "id": "8",
+      "productName": "Shirt",
+      "categoryId": "2",
+      "description": "Men's Casual Green Colored TShirt",
+      "price": "650",
+      "image": "https://i.postimg.cc/qR45c9Gw/t-shirt.jpg",
+      "rating": "4.5",
+      "review": "20",
+      "warrenty": "0",
+      "is_available": "true",
+      "vendorName": "Fashion"
+    }
+  ]
+}

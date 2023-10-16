@@ -1,0 +1,171 @@
+E - COMMERCE
+** * ** * ** 
+
+- lazy loading 
+    - used for pages with high traffic
+    - ex: home pages
+    - lazy loaded module - all component inside this module are lazy loaded components
+
+-ADMIN
+    - home - all products
+           - single product view
+           - add product
+           - edit product 
+           - delete product 
+
+to create lazy loaded module
+  =>    ng g module moduleName --routing moduleName --module app.module 
+                                   |                            |
+                               for routing              app routing module name 
+
+
+                                       
+
+now allproducts page ilekk dynamically redirect aakanam. If path:"", then 'allproducts' ilekk redirect aakanam 
+For that code  in app-routing.module.ts:
+        {path:"", redirectTo:'products',pathMatch:"full"} - ith const routes:Routes=[] il kodukkanam
+
+        then products-routing.module.ts - il path:'' component:productComponet-aanu so products page ilekk redirect aakum
+        So change it to - component:AllproductsComponent
+
+
+to create a normal module 
+    =>  ng g m moduleName
+    if need routing =>  ng g m moduleName --route
+
+    ex: create header and footer components in another normal module
+
+    header and footer must be given to all pages
+    but they are created in differnt module -site-layout module
+
+    so before calling header and footer selectors in app.component.html
+            - in site-layout.module.ts - exports:[headerComponent, footerComponent] - ividenn components import cheyyuka 
+            - in app.module.ts - imports:[SiteLayoutModule] - app.module ilekk SiteLayoutModule import cheyyuka 
+            - give selectors in app.component.html
+                    -   <app-header></app-header>
+                        <router-outlet></router-outlet>
+                        <app-footer></app-footer>
+
+
+index.html - bootstrap link and script codes copy and paste
+           - fontawesome cdn link copy and paste
+
+to get inbuild themes
+     using start bootstrap website
+
+
+ADD PRODUCT
+    - Add Product Form
+
+Single Product view
+
+    - VIew Products details
+    - add to cart - button
+
+
+install json server
+    =>  npm i --save json-server
+
+    db.json - database
+    server  - json-server
+    run     - npx json-server --watch db.json --port 3000
+              ____________________________________________  
+                                                       |
+                                                   portNumber 
+
+    
+
+in DB
+
+product details
+ id
+ productName
+ categoryId - electr 1
+              fashion 2
+              jwellery 3
+
+
+-Everything importing in subModule need to import in rootModule
+
+param along url 
+---------------
+when clicking view button of each product, view-product page must contain only the details of that respective item
+for that a param must be given along url 
+for that change path in product-routing.module
+    - param must be given along the path
+    ex: change  
+        path:'view-products/:id'.................
+        path:'edit-product/:id'..................
+        patah:'delete-product/:id'...............
+
+    then in AllproductsComponent.html - href='products/view-product/+{{i.id}}'
+
+in ds file
+    - api call to call single product data
+    - get method 
+    -contain param
+        ex: - getProduct(id:any){
+                return this.http.get('http://localhost:3000/products'+id)
+              }
+
+
+call this api in singleVIew.ts
+
+    - have to access param from url 
+        ActivatedRoute 
+        --------------
+                - class is used to access params
+                params        
+                    - method - asynchronous
+
+
+Module to Module Data sharing
+-----------------------------
+
+Behavioural Subject - anyone can update, access data 
+                    - can send data in stream 
+    a special type of subject , a special type of observable in RxJS, 
+    that keeps track of the current value and emits it to new subscribers. 
+    It is similar to a regular subject, but it also stores the latest value that has been passed to it. 
+
+
+(keyup)="function($event)" - for getting streamed data
+
+for edit
+--------
+    2 way binding
+    [(ngModel)] - used to access data from ts to html Form
+                - import module - FormsModule
+
+
+USER FUNCTIONS
+--------------
+
+signup 
+login
+
+    mondodb
+    -------
+        collection - users
+        {
+            name:anu,
+            password:jfdfnjkndvkj,
+            email:anu@gmail.com,
+            address:[{adrress1},
+                    {address2},.....],
+            wishlist:[{},{},...],
+            cart:[{},{},.....],
+            orders:[{},{},......]
+        }
+
+signup
+login - forgot password
+
+wishlist - add, delete, view
+Cart - add, edit, view, delete - buy 
+Order - view, cancel 
+profile - view, edit 
+review
+rating 
+logout
+
